@@ -1,0 +1,27 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.solo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation fileTree(dir: 'lib', include: ['*.jar'])
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
+	implementation 'net.sf.jasperreports:jasperreports:6.20.0'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

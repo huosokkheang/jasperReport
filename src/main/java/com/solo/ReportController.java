@@ -39,6 +39,8 @@ public class ReportController {
 		params.setString("age", "18 years old");
 		//End
 		
+		//return JasperReportUtil.ExportReport("excel", params, "test");
+		//return JasperReportUtil.ExportReport("html", params, "test");
 		return JasperReportUtil.ExportReport("pdf", params, "test");
 	}
 

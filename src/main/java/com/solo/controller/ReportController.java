@@ -40,8 +40,8 @@ public class ReportController {
 		//End
 		
 		//return JasperReportUtil.ExportReport("excel", params, "test");
-		return JasperReportUtil.ExportReport("html", params, "test");
-		//return JasperReportUtil.ExportReport("pdf", params, "test");
+		//return JasperReportUtil.ExportReport("html", params, "test");
+		return JasperReportUtil.ExportReport("pdf", params, "test");
 	}
 
 }

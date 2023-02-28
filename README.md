@@ -49,7 +49,7 @@ public class ReportController {
 		params.setString("name", "Brojum");
 		params.setString("age", "18 years old");
 		
-		return JasperReportUtil.ExportReport(JasperReportUtil.PDF, params, "jasper/test", JasperReportUtil.PDF);
+		return JasperReportUtil.ExportReport(JasperReportUtil.PDF, params, "jasper/test", "fileNameExport");
 	}
 	
 	@PostMapping("/html")
@@ -73,7 +73,7 @@ public class ReportController {
 		params.setString("name", "Brojum");
 		params.setString("age", "18 years old");
 
-		return JasperReportUtil.ExportReport(JasperReportUtil.HTML, params, "jasper/test", JasperReportUtil.HTML);
+		return JasperReportUtil.ExportReport(JasperReportUtil.HTML, params, "jasper/test", "fileNameExport");
 	}
 	
 	@PostMapping("/excel")
@@ -97,7 +97,7 @@ public class ReportController {
 		params.setString("name", "Brojum");
 		params.setString("age", "18 years old");
 		
-		return JasperReportUtil.ExportReport(JasperReportUtil.EXCEL, params, "jasper/test", JasperReportUtil.EXCEL);
+		return JasperReportUtil.ExportReport(JasperReportUtil.EXCEL, params, "jasper/test", "fileNameExport");
 	}
 	
 	@PostMapping("/word")
@@ -121,7 +121,7 @@ public class ReportController {
 		params.setString("name", "Brojum");
 		params.setString("age", "18 years old");
 		
-		return JasperReportUtil.ExportReport(JasperReportUtil.WORD, params, "jasper/test", JasperReportUtil.WORD);
+		return JasperReportUtil.ExportReport(JasperReportUtil.WORD, params, "jasper/test", "fileNameExport");
 	}
 	
 	@PostMapping("/powerpoint")
@@ -145,7 +145,7 @@ public class ReportController {
 		params.setString("name", "Brojum");
 		params.setString("age", "18 years old");
 		
-		return JasperReportUtil.ExportReport(JasperReportUtil.POWERPOINT, params, "jasper/test", JasperReportUtil.POWERPOINT);
+		return JasperReportUtil.ExportReport(JasperReportUtil.POWERPOINT, params, "jasper/test", "fileNameExport");
 	}
 </pre>
 

@@ -15,8 +15,12 @@ Export to IMAGE, PDF, HTML, WORD, EXCEL, POWERPOINT
 <pre>
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.util.StreamUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.core.collection.SList;

@@ -2,8 +2,12 @@ package com.solo.controller;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.util.StreamUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.core.collection.SList;
@@ -16,8 +20,8 @@ import net.sf.jasperreports.engine.JRException;
 @RestController
 public class ReportController {
 	
-	@PostMapping("/pdf")
-	public ResponseEntity<byte[]> pdf() throws JRException, SException, IOException{
+	@GetMapping("/pdf")
+	public void pdf(HttpServletResponse response) throws JRException, SException, IOException{
 		Solo params = new Solo();
 		
 		SList list = new SList();
@@ -29,19 +33,21 @@ public class ReportController {
 			solo.setInt("unit", i + 1);
 			solo.setString("price", i * 2 + " USD");
 			list.add(solo);
-		}
-		System.out.println(list);
-		
+		}		
 		params.set("myCollection", JasperReportUtil.setDataSource(list));
-		params.setString("title", "Brojum.com");
-		params.setString("name", "Brojum");
+		params.setString("title", "Solo Framework");
+		params.setString("name", "Solo Name");
 		params.setString("age", "18 years old");
 		
-		return JasperReportUtil.ExportReport(JasperReportUtil.PDF, params, "jasper/test", JasperReportUtil.PDF);
+		byte[] pdf = JasperReportUtil.ExportReport(JasperReportUtil.PDF, params, "jasper/test", "pdfFileName").getBody();
+		response.setContentType("application/pdf;charset=UTF-8");
+		response.setHeader("Content-length", "" + pdf.length);
+		response.setHeader("Content-disposition", "filename=" + "pgg.pdf");
+        StreamUtils.copy(pdf, response.getOutputStream());
 	}
 	
-	@PostMapping("/html")
-	public ResponseEntity<byte[]> html() throws JRException, SException, IOException{
+	@GetMapping("/image")
+	public void image(HttpServletResponse response) throws JRException, SException, IOException{
 		Solo params = new Solo();
 		
 		SList list = new SList();
@@ -53,18 +59,41 @@ public class ReportController {
 			solo.setInt("unit", i + 1);
 			solo.setString("price", i * 2 + " USD");
 			list.add(solo);
-		}
-		System.out.println(list);
-		
+		}		
 		params.set("myCollection", JasperReportUtil.setDataSource(list));
-		params.setString("title", "Brojum.com");
-		params.setString("name", "Brojum");
+		params.setString("title", "Solo Framework");
+		params.setString("name", "Solo Name");
+		params.setString("age", "18 years old");
+		
+		byte[] image = JasperReportUtil.ExportReport(JasperReportUtil.IMAGE, params, "jasper/test", "imageFileName").getBody();
+		
+		response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+        StreamUtils.copy(image, response.getOutputStream());
+	}
+	
+	@GetMapping("/html")
+	public byte[] html() throws JRException, SException, IOException{
+		Solo params = new Solo();
+		
+		SList list = new SList();
+		
+		for(int i=1 ; i<=10; i++) {
+			Solo solo = new Solo();
+			solo.setInt("id", i);
+			solo.setString("pname", "product " + i);
+			solo.setInt("unit", i + 1);
+			solo.setString("price", i * 2 + " USD");
+			list.add(solo);
+		}		
+		params.set("myCollection", JasperReportUtil.setDataSource(list));
+		params.setString("title", "Solo Framework");
+		params.setString("name", "Solo Name");
 		params.setString("age", "18 years old");
 
-		return JasperReportUtil.ExportReport(JasperReportUtil.HTML, params, "jasper/test", JasperReportUtil.HTML);
+		return JasperReportUtil.ExportReport(JasperReportUtil.HTML, params, "jasper/test", "htmlFileName").getBody();
 	}
 	
-	@PostMapping("/excel")
+	@GetMapping("/excel")
 	public ResponseEntity<byte[]> excel() throws JRException, SException, IOException{
 		Solo params = new Solo();
 		
@@ -77,18 +106,16 @@ public class ReportController {
 			solo.setInt("unit", i + 1);
 			solo.setString("price", i * 2 + " USD");
 			list.add(solo);
-		}
-		System.out.println(list);
-		
+		}		
 		params.set("myCollection", JasperReportUtil.setDataSource(list));
-		params.setString("title", "Brojum.com");
-		params.setString("name", "Brojum");
+		params.setString("title", "Solo Framework");
+		params.setString("name", "Solo Name");
 		params.setString("age", "18 years old");
 		
-		return JasperReportUtil.ExportReport(JasperReportUtil.EXCEL, params, "jasper/test", JasperReportUtil.EXCEL);
+		return JasperReportUtil.ExportReport(JasperReportUtil.EXCEL, params, "jasper/test", "ExcelFileName");
 	}
 	
-	@PostMapping("/word")
+	@GetMapping("/word")
 	public ResponseEntity<byte[]> word() throws JRException, SException, IOException{
 		Solo params = new Solo();
 		
@@ -101,18 +128,16 @@ public class ReportController {
 			solo.setInt("unit", i + 1);
 			solo.setString("price", i * 2 + " USD");
 			list.add(solo);
-		}
-		System.out.println(list);
-		
+		}		
 		params.set("myCollection", JasperReportUtil.setDataSource(list));
-		params.setString("title", "Brojum.com");
-		params.setString("name", "Brojum");
+		params.setString("title", "Solo Framework");
+		params.setString("name", "Solo Name");
 		params.setString("age", "18 years old");
 		
-		return JasperReportUtil.ExportReport(JasperReportUtil.WORD, params, "jasper/test", JasperReportUtil.WORD);
+		return JasperReportUtil.ExportReport(JasperReportUtil.WORD, params, "jasper/test", "wordFileName");
 	}
 	
-	@PostMapping("/powerpoint")
+	@GetMapping("/powerpoint")
 	public ResponseEntity<byte[]> powerpoint() throws JRException, SException, IOException{
 		Solo params = new Solo();
 		
@@ -125,15 +150,13 @@ public class ReportController {
 			solo.setInt("unit", i + 1);
 			solo.setString("price", i * 2 + " USD");
 			list.add(solo);
-		}
-		System.out.println(list);
-		
+		}		
 		params.set("myCollection", JasperReportUtil.setDataSource(list));
-		params.setString("title", "Brojum.com");
-		params.setString("name", "Brojum");
+		params.setString("title", "Solo Framework");
+		params.setString("name", "Solo Name");
 		params.setString("age", "18 years old");
 		
-		return JasperReportUtil.ExportReport(JasperReportUtil.POWERPOINT, params, "jasper/test", JasperReportUtil.POWERPOINT);
+		return JasperReportUtil.ExportReport(JasperReportUtil.POWERPOINT, params, "jasper/test", "powerPointFileName");
 	}
 
 }

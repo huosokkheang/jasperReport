@@ -3,7 +3,7 @@ JasperReport Solo Framework
 
 Doc: https://huosokkheang.github.io/Solo-Framework
 
-Export to PDF, HTML, WORD, EXCEL, POWERPOINT
+Export to IMAGE, PDF, HTML, WORD, EXCEL, POWERPOINT
 
 - https://brojum.com/JasperReport/pdf
 - https://brojum.com/JasperReport/image

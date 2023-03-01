@@ -41,7 +41,6 @@ public class ReportController {
 		
 		byte[] pdf = JasperReportUtil.ExportReport(JasperReportUtil.PDF, params, "jasper/test", "pdfFileName").getBody();
 		response.setContentType("application/pdf;charset=UTF-8");
-		response.setHeader("Content-length", "" + pdf.length);
         StreamUtils.copy(pdf, response.getOutputStream());
 	}
 	

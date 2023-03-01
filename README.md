@@ -5,11 +5,12 @@ Doc: https://huosokkheang.github.io/Solo-Framework
 
 Export to PDF, HTML, WORD, EXCEL, POWERPOINT
 
-- http://localhost:8080/pdf
-- http://localhost:8080/html
-- http://localhost:8080/word
-- http://localhost:8080/excel
-- http://localhost:8080/powerpoint
+- https://brojum.com/JasperReport/pdf
+- https://brojum.com/JasperReport/image
+- https://brojum.com/JasperReport/html
+- https://brojum.com/JasperReport/word
+- https://brojum.com/JasperReport/excel
+- https://brojum.com/JasperReport/powerpoint
 
 <pre>
 import java.io.IOException;

@@ -54,8 +54,6 @@ public class ReportController {
 		
 		byte[] pdf = JasperReportUtil.ExportReport(JasperReportUtil.PDF, params, "jasper/test", "pdfFileName").getBody();
 		response.setContentType("application/pdf;charset=UTF-8");
-		response.setHeader("Content-length", "" + pdf.length);
-		response.setHeader("Content-disposition", "filename=" + "pgg.pdf");
         StreamUtils.copy(pdf, response.getOutputStream());
 	}
 	
@@ -104,6 +102,34 @@ public class ReportController {
 		params.setString("age", "18 years old");
 
 		return JasperReportUtil.ExportReport(JasperReportUtil.HTML, params, "jasper/test", "htmlFileName").getBody();
+	}
+	
+	@GetMapping("/htmlToPdf")
+	public void htmlToPdf(HttpServletResponse response) throws JRException, SException, IOException, DocumentException{
+		Solo params = new Solo();
+		
+		SList list = new SList();
+		
+		for(int i=1 ; i<=1000; i++) {
+			Solo solo = new Solo();
+			solo.setInt("id", i);
+			solo.setString("pname", "product " + i);
+			solo.setInt("unit", i + 1);
+			solo.setString("price", i * 2 + " USD");
+			list.add(solo);
+		}		
+		params.set("myCollection", JasperReportUtil.setDataSource(list));
+		params.setString("title", "Solo Framework");
+		params.setString("name", "Solo Name");
+		params.setString("age", "18 years old");
+
+		byte[] html = JasperReportUtil.ExportReport(JasperReportUtil.HTML, params, "jasper/test", "htmlFileName").getBody();
+		
+		ByteArrayInputStream byteArrayInputStream = JasperReportUtil.convertHtmlToPdf(new String(html));
+		response.setContentType("application/pdf");
+        response.setHeader("Content-Disposition", "filename=htmlToPdf.pdf");
+        IOUtils.copy(byteArrayInputStream, response.getOutputStream());
+	    
 	}
 	
 	@GetMapping("/excel")
@@ -173,6 +199,7 @@ public class ReportController {
 	}
 
 }
+
 </pre>
 
 ![image](https://user-images.githubusercontent.com/35053923/220713972-0f170699-0f37-4625-af6e-ebd30ee9bbf3.png)

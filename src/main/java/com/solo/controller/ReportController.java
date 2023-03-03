@@ -1,9 +1,11 @@
 package com.solo.controller;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.pdfbox.io.IOUtils;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StreamUtils;
@@ -14,6 +16,7 @@ import com.core.collection.SList;
 import com.core.collection.Solo;
 import com.core.exception.business.SException;
 import com.core.util.Jasper.JasperReportUtil;
+import com.lowagie.text.DocumentException;
 
 import net.sf.jasperreports.engine.JRException;
 
@@ -89,6 +92,34 @@ public class ReportController {
 		params.setString("age", "18 years old");
 
 		return JasperReportUtil.ExportReport(JasperReportUtil.HTML, params, "jasper/test", "htmlFileName").getBody();
+	}
+	
+	@GetMapping("/htmlToPdf")
+	public void htmlToPdf(HttpServletResponse response) throws JRException, SException, IOException, DocumentException{
+		Solo params = new Solo();
+		
+		SList list = new SList();
+		
+		for(int i=1 ; i<=1000; i++) {
+			Solo solo = new Solo();
+			solo.setInt("id", i);
+			solo.setString("pname", "product " + i);
+			solo.setInt("unit", i + 1);
+			solo.setString("price", i * 2 + " USD");
+			list.add(solo);
+		}		
+		params.set("myCollection", JasperReportUtil.setDataSource(list));
+		params.setString("title", "Solo Framework");
+		params.setString("name", "Solo Name");
+		params.setString("age", "18 years old");
+
+		byte[] html = JasperReportUtil.ExportReport(JasperReportUtil.HTML, params, "jasper/test", "htmlFileName").getBody();
+		
+		ByteArrayInputStream byteArrayInputStream = JasperReportUtil.convertHtmlToPdf(new String(html));
+		response.setContentType("application/pdf");
+        response.setHeader("Content-Disposition", "filename=htmlToPdf.pdf");
+        IOUtils.copy(byteArrayInputStream, response.getOutputStream());
+	    
 	}
 	
 	@GetMapping("/excel")

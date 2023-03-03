@@ -100,7 +100,7 @@ public class ReportController {
 		
 		SList list = new SList();
 		
-		for(int i=1 ; i<=1000; i++) {
+		for(int i=1 ; i<=10; i++) {
 			Solo solo = new Solo();
 			solo.setInt("id", i);
 			solo.setString("pname", "product " + i);

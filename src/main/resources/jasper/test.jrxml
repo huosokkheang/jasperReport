@@ -48,21 +48,21 @@
 			<textField>
 				<reportElement x="180" y="0" width="200" height="30" uuid="6f46eae2-720f-4a21-9cdc-7606dcd8cd4d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="19" isBold="true"/>
+					<font fontName="ArialUnicodeMS" size="19" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="380" y="70" width="100" height="30" uuid="ca684a34-e5db-46ac-bdb3-81514fcef204"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font fontName="ArialUnicodeMS" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="380" y="110" width="100" height="30" uuid="1fe23e8c-70f0-4458-b38a-1ac0d0606fc8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font fontName="ArialUnicodeMS" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
 			</textField>
@@ -102,7 +102,7 @@
 							<textField>
 								<reportElement x="0" y="0" width="110" height="30" uuid="67b92986-94d0-4d05-a72f-2a94eda8fa41"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font size="12"/>
+									<font fontName="ArialUnicodeMS" size="12"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 							</textField>
@@ -123,7 +123,7 @@
 							<textField>
 								<reportElement x="0" y="0" width="140" height="30" uuid="fb2a80f3-8a62-4851-8ee5-2e56174a3411"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font size="12"/>
+									<font fontName="ArialUnicodeMS" size="12"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{pname}]]></textFieldExpression>
 							</textField>
@@ -144,7 +144,7 @@
 							<textField>
 								<reportElement x="0" y="0" width="200" height="30" uuid="c68798d7-7e6d-4a47-96a6-87579b7d2382"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font size="12"/>
+									<font fontName="ArialUnicodeMS" size="12"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{unit}]]></textFieldExpression>
 							</textField>
@@ -165,7 +165,7 @@
 							<textField>
 								<reportElement x="0" y="0" width="100" height="30" uuid="30786657-a9db-4827-bad0-78a40fa7e746"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font size="12"/>
+									<font fontName="ArialUnicodeMS" size="12"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
 							</textField>

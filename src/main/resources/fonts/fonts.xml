@@ -29,10 +29,20 @@
     </fontFamily>
     
     <fontFamily name="ArialUnicodeMS">
-        <normal><![CDATA[fonts/ArialUnicodeMS/Arial Unicode MS Font.ttf]]></normal>
-        <bold><![CDATA[fonts/ArialUnicodeMS/Arial Unicode MS Font.ttf]]></bold>
-    	<italic><![CDATA[fonts/ArialUnicodeMS/Arial Unicode MS Font.ttf]]></italic>
-		<boldItalic><![CDATA[fonts/ArialUnicodeMS/Arial Unicode MS Font.ttf]]></boldItalic>
+        <normal><![CDATA[fonts/ArialUnicodeMS/ArialUnicodeMS.ttf]]></normal>
+        <bold><![CDATA[fonts/ArialUnicodeMS/ArialUnicodeMS.ttf]]></bold>
+    	<italic><![CDATA[fonts/ArialUnicodeMS/ArialUnicodeMS.ttf]]></italic>
+		<boldItalic><![CDATA[fonts/ArialUnicodeMS/ArialUnicodeMS.ttf]]></boldItalic>
+        <pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
+		<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+		<exportFonts/>
+    </fontFamily>
+    
+    <fontFamily name="KhmerOSSiemreap">
+        <normal><![CDATA[fonts/KhmerOSSiemreap.ttf]]></normal>
+        <bold><![CDATA[fonts/KhmerOSSiemreap.ttf]]></bold>
+    	<italic><![CDATA[fonts/KhmerOSSiemreap.ttf]]></italic>
+		<boldItalic><![CDATA[fonts/KhmerOSSiemreap.ttf]]></boldItalic>
         <pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
 		<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
 		<exportFonts/>

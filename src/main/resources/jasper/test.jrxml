@@ -48,35 +48,35 @@
 			<textField>
 				<reportElement x="180" y="0" width="200" height="30" uuid="6f46eae2-720f-4a21-9cdc-7606dcd8cd4d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="ArialUnicodeMS" size="19" isBold="true"/>
+					<font fontName="Core Sans CR" size="19" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="380" y="70" width="100" height="30" uuid="ca684a34-e5db-46ac-bdb3-81514fcef204"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="ArialUnicodeMS" isBold="true"/>
+					<font fontName="Core Sans CR" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="380" y="110" width="100" height="30" uuid="1fe23e8c-70f0-4458-b38a-1ac0d0606fc8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="ArialUnicodeMS" isBold="true"/>
+					<font fontName="Core Sans CR" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="80" y="70" width="100" height="30" uuid="1ff71800-13b1-4530-a0dd-a555a5539c9b"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="ArialUnicodeMS"/>
+					<font fontName="Core Sans CR"/>
 				</textElement>
 				<text><![CDATA[Name :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="80" y="105" width="100" height="30" uuid="19104535-0d64-4e0e-ace3-284bca5a5d4e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="ArialUnicodeMS"/>
+					<font fontName="Core Sans CR"/>
 				</textElement>
 				<text><![CDATA[Age :]]></text>
 			</staticText>
@@ -97,7 +97,7 @@
 							<staticText>
 								<reportElement x="0" y="0" width="110" height="30" uuid="07995a7b-b5f9-4b24-ad97-9ee1eba6905e"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="ArialUnicodeMS" isBold="true"/>
+									<font fontName="Core Sans CR" isBold="true"/>
 								</textElement>
 								<text><![CDATA[ID]]></text>
 							</staticText>
@@ -106,7 +106,7 @@
 							<textField>
 								<reportElement x="0" y="0" width="110" height="30" uuid="67b92986-94d0-4d05-a72f-2a94eda8fa41"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="ArialUnicodeMS" size="12"/>
+									<font fontName="Core Sans CR" size="12"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 							</textField>
@@ -118,7 +118,7 @@
 							<staticText>
 								<reportElement x="0" y="0" width="140" height="30" uuid="f0476ca9-43bb-43f1-8a44-aab51dfbc2cc"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="ArialUnicodeMS" isBold="true"/>
+									<font fontName="Core Sans CR" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Product Name]]></text>
 							</staticText>
@@ -127,7 +127,7 @@
 							<textField>
 								<reportElement x="0" y="0" width="140" height="30" uuid="fb2a80f3-8a62-4851-8ee5-2e56174a3411"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="ArialUnicodeMS" size="12"/>
+									<font fontName="Core Sans CR" size="12"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{pname}]]></textFieldExpression>
 							</textField>
@@ -139,7 +139,7 @@
 							<staticText>
 								<reportElement x="0" y="0" width="200" height="30" uuid="26e2d611-90a4-4cb1-9539-cf3bde38eb48"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="ArialUnicodeMS" isBold="true"/>
+									<font fontName="Core Sans CR" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Unit]]></text>
 							</staticText>
@@ -148,7 +148,7 @@
 							<textField>
 								<reportElement x="0" y="0" width="200" height="30" uuid="c68798d7-7e6d-4a47-96a6-87579b7d2382"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="ArialUnicodeMS" size="12"/>
+									<font fontName="Core Sans CR" size="12"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{unit}]]></textFieldExpression>
 							</textField>
@@ -160,7 +160,7 @@
 							<staticText>
 								<reportElement x="0" y="0" width="100" height="30" uuid="3dd50c1d-bd32-49f2-b48d-b7bf05ca9aaa"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="ArialUnicodeMS" isBold="true"/>
+									<font fontName="Core Sans CR" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Price]]></text>
 							</staticText>
@@ -169,7 +169,7 @@
 							<textField>
 								<reportElement x="0" y="0" width="100" height="30" uuid="30786657-a9db-4827-bad0-78a40fa7e746"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="ArialUnicodeMS" size="12"/>
+									<font fontName="Core Sans CR" size="12"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
 							</textField>

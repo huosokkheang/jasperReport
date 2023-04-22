@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Report" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="734fe629-d5df-4bac-ad7a-39df34992f00">
 	<style name="Sans_Normal" isDefault="true" fontName="ipaexm" fontSize="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
@@ -68,12 +68,16 @@
 			</textField>
 			<staticText>
 				<reportElement x="80" y="70" width="100" height="30" uuid="1ff71800-13b1-4530-a0dd-a555a5539c9b"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialUnicodeMS"/>
+				</textElement>
 				<text><![CDATA[Name :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="80" y="105" width="100" height="30" uuid="19104535-0d64-4e0e-ace3-284bca5a5d4e"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialUnicodeMS"/>
+				</textElement>
 				<text><![CDATA[Age :]]></text>
 			</staticText>
 			<componentElement>
@@ -93,7 +97,7 @@
 							<staticText>
 								<reportElement x="0" y="0" width="110" height="30" uuid="07995a7b-b5f9-4b24-ad97-9ee1eba6905e"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="ArialUnicodeMS" isBold="true"/>
 								</textElement>
 								<text><![CDATA[ID]]></text>
 							</staticText>
@@ -114,7 +118,7 @@
 							<staticText>
 								<reportElement x="0" y="0" width="140" height="30" uuid="f0476ca9-43bb-43f1-8a44-aab51dfbc2cc"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="ArialUnicodeMS" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Product Name]]></text>
 							</staticText>
@@ -135,7 +139,7 @@
 							<staticText>
 								<reportElement x="0" y="0" width="200" height="30" uuid="26e2d611-90a4-4cb1-9539-cf3bde38eb48"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="ArialUnicodeMS" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Unit]]></text>
 							</staticText>
@@ -156,7 +160,7 @@
 							<staticText>
 								<reportElement x="0" y="0" width="100" height="30" uuid="3dd50c1d-bd32-49f2-b48d-b7bf05ca9aaa"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="ArialUnicodeMS" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Price]]></text>
 							</staticText>

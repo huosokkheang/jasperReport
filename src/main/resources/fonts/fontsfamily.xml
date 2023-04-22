@@ -1,32 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fontFamilies>
- 
-    <fontFamily name="custom">
-        <normal><![CDATA[fonts/comicbd.ttf]]></normal>
-        <bold><![CDATA[fonts/comicbd.ttf]]></bold>
-        <pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
-		<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
-		<exportFonts/>
-    </fontFamily>
-    
-    <fontFamily name="ipaexg">
-       <normal><![CDATA[fonts/ipaexg/ipaexg.ttf]]></normal>
-		<bold><![CDATA[fonts/ipaexg/ipaexg.ttf]]></bold>
-		<italic><![CDATA[fonts/ipaexg/ipaexg.ttf]]></italic>
-       	<pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
-		<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
-		<exportFonts/>
-    </fontFamily>
-
-    <fontFamily name="ipaexm">
-        <normal><![CDATA[fonts/ipaexm/ipaexm.ttf]]></normal>
-        <bold><![CDATA[fonts/ipaexm/ipaexm.ttf]]></bold>
-    	<italic><![CDATA[fonts/ipaexm/ipaexm.ttf]]></italic>
-		<boldItalic><![CDATA[fonts/ipaexm/ipaexm.ttf]]></boldItalic>
-        <pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
-		<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
-		<exportFonts/>
-    </fontFamily>
     
     <fontFamily name="ArialUnicodeMS">
         <normal><![CDATA[fonts/ArialUnicodeMS/ArialUnicodeMS.ttf]]></normal>

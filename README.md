@@ -12,4 +12,4 @@ Export to IMAGE, PDF, HTML, WORD, EXCEL, POWERPOINT
 - https://brojum.com/JasperReport/excel => <a target="_blank" rel="excel" href="https://view.officeapps.live.com/op/view.aspx?src=https://brojum.com/JasperReport/excel">Excel</a>
 - https://brojum.com/JasperReport/powerpoint => <a target="_blank" rel="powerpoint" href="https://view.officeapps.live.com/op/view.aspx?src=https://brojum.com/JasperReport/powerpoint">PowerPoint</a>
 
-![image](https://user-images.githubusercontent.com/35053923/220713972-0f170699-0f37-4625-af6e-ebd30ee9bbf3.png)
+![Solo](https://github.com/huosokkheang/jasperReport/assets/35053923/1e307c43-d7b7-436f-81ee-1517b6407f19)

@@ -26,6 +26,7 @@
 		<bold><![CDATA[fonts/CoreSansCR/Core-Sans-CR-65-Bold.ttf]]></bold>
 		<italic><![CDATA[fonts/CoreSansCR/Core-Sans-CR-45-Regular-Italic.ttf]]></italic>
 		<boldItalic><![CDATA[fonts/CoreSansCR/Core-Sans-CR-65-Bold-Italic.ttf]]></boldItalic>
+		<pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
 		<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
 		<exportFonts/>
 	</fontFamily>
